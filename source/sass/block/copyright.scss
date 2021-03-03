@@ -1,0 +1,21 @@
+.copyright__text {
+  color: $black;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+
+  @include margin-padding-zero;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 26px;
+  width: 182px;
+}
+
+.copyright__link {
+  height: 35px;
+  width: 27px;
+}

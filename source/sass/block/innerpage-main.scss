@@ -1,0 +1,9 @@
+.innerpage-main {
+  background-color: $dark-grey-background;
+}
+
+.innerpage-main__title {
+  @include title-mob;
+  font-size: 27px;
+  text-align: center;
+}

@@ -1,6 +1,36 @@
 // Начните писать стили здесь
-// @import "normalize.css/normalize";
+// global blocks
+@import "normalize.css/normalize";
 @import "global/fonts";
-// @import "global/global";
-// @import "global/variables";
-// @import "block/container";
+@import "global/global";
+@import "global/variables";
+@import "global/mixins";
+// common block for pages
+@import "block/page";
+@import "block/container";
+@import "block/container-full";
+@import "block/page-header";
+@import "block/main-nav";
+// main page
+@import "block/promo";
+@import "block/main-category";
+@import "block/popular-product";
+@import "block/product-table";
+@import "block/button";
+@import "block/about-us";
+@import "block/reviews";
+@import "block/contacts";
+@import "block/map";
+@import "block/page-footer";
+@import "block/social";
+@import "block/copyright";
+@import "block/modal";
+@import "block/order-form";
+// forma page
+@import "block/innerpage-main";
+@import "block/knitwear-request";
+@import "block/knitwear-form";
+// catalog page
+@import "block/catalog-list";
+@import "block/product";
+@import "block/production";

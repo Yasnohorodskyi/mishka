@@ -1,0 +1,73 @@
+@mixin title-mob {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: $black;
+}
+
+@mixin title-table {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin title-desktop {
+  font-size: 53px;
+  line-height: 57px;
+}
+
+@mixin form-text {
+  font: inherit;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 18px;
+  color: $black;
+}
+
+@mixin catalog-title {
+  color: $black;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+@mixin tablet-block {
+  height: 100%;
+  border-bottom: none;
+}
+
+@mixin margin-padding-zero {
+  margin: 0;
+  padding: 0;
+}
+
+// Технические миксины
+
+@mixin red-outline {
+  outline: 5px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -5px;
+}
+
+@mixin green-outline {
+  outline: 5px solid rgba(0, 255, 0, 0.8);
+  outline-offset: -5px;
+}
+
+@mixin yellow-outline {
+  outline: 5px solid rgba(255, 255, 0, 0.8);
+  outline-offset: -5px;
+}
+
+@mixin blue-outline {
+  outline: 5px solid rgba(0, 0, 255, 0.8);
+  outline-offset: -5px;
+}
+
+@mixin purple-ouitline {
+  outline: 5px solid rgba(128, 72, 123, 0.884);
+  outline-offset: -5px;
+}
+
+@mixin yellowgreen-ouitline {
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+}

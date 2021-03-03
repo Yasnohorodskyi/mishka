@@ -1,5 +1,18 @@
 .container {
-  min-width: 240px;
-  margin: 0 30px;
-  padding: 0;
+  min-width: 260px;
+  margin: 0;
+  padding: 0 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1050px;
+    margin: 0 auto;
+  }
 }

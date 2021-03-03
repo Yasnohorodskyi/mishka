@@ -1,0 +1,36 @@
+.product__image {
+  background-color: $dark-grey-background;
+}
+
+.product__title {
+  @include catalog-title;
+}
+
+.product__title:focus,
+.product__title:hover {
+  color: $black-hover;
+}
+
+.product__title:active {
+  color: $black-visited;
+}
+
+.product__description {
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.product__price {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.product__caption:focus,
+.product__caption:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product__caption:active,
+.product__caption:visited {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}

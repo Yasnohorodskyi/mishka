@@ -5,6 +5,7 @@ $light-soft-green-hover: #59d5bc;
 $dark-soft-green: #56c3b2;
 $dark-soft-green-hover: #46c1ae;
 $soft-green-active: #62d1ba;
+// Use for font by default
 $dark-grey-font: #444444;
 $soft-grey: #ececec;
 $soft-grey-background: #f9f9f9;
@@ -13,8 +14,17 @@ $modal-background: #c6c6c6;
 $black: #000000;
 $black-hover: rgba(0, 0, 0, 0.6);
 $black-visited: rgba(0, 0, 0, 0.3);
+$black-line: rgba(0, 0, 0, 0.1);
+$grey-modal-border: rgba(0, 1, 1, 0.25);
+
+$dark-grey-border-point-one: rgba(68, 68, 68, 0.1);
+$dark-grey-border-point-three: rgba(68, 68, 68, 0.3);
+
+// Use for background by default
 $white: #ffffff;
 $white-opacity-third: rgba(255, 255, 255, 0.3);
+$white-opacity-point-nine: rgba(255, 255, 255, 0.9);
+$white-opacity-point-one: rgba(255, 255, 255, 0.1);
 
 // Dimension
 $tablet-width: 768px;

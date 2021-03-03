@@ -1,0 +1,25 @@
+.production__title {
+  @include catalog-title;
+}
+
+.production__video-block {
+  background-color: $dark-grey-background;
+}
+
+.production__description {
+  font-size: 13px;
+}
+
+.production__order-button {
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.production__container:focus,
+.production__container:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.production__container:active {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}

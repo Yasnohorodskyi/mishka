@@ -1,0 +1,62 @@
+.promo {
+  height: 489px;
+  background-color: $soft-grey-background;
+  margin-bottom: 31px;
+}
+
+.promo__container {
+  background-image: url("../img/hero-mobile.jpg");
+  background-position: center -17px;
+  background-repeat: no-repeat;
+  display: grid;
+  height: 100%;
+  align-items: end;
+}
+
+.promo__title {
+  @include title-mob;
+  font-size: 27px;
+}
+
+.promo__title--wrapper {
+  align-self: start;
+  padding: 0 30px;
+  margin-top: 73px;
+  min-width: 260px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    height: 763px;
+    margin-bottom: 39px;
+  }
+
+  .promo__container {
+    background-image: url("../img/hero-desktop 2.jpg");
+    background-position: center;
+  }
+
+  .promo__title {
+    @include title-table;
+  }
+
+  .promo__title--wrapper {
+    margin-top: 165px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    margin-bottom: 54px;
+  }
+
+  .promo__container {
+    background-image: url("../img/hero-desktop 1.jpg");
+    background-position: center;
+  }
+
+  .promo__title {
+    @include title-desktop;
+  }
+}

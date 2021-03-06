@@ -1,0 +1,60 @@
+.knitwear-form__field {
+  border: none;
+}
+
+.knitwear-form__title {
+  color: $light-soft-green;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.knitwear-form__list-group-type,
+.knitwear-form__list-group-color,
+.knitwear-form__list-group-fullname {
+  list-style: none;
+}
+
+.knitwear-form__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.knitwear-form__option-state {
+  @include form-text;
+  border: none;
+  border-bottom: 2px solid $black;
+}
+
+.knitwear-form__option-state::placeholder,
+.knitwear-form__option-additional::placeholder {
+  color: $black-visited;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.knitwear-form__option-state:focus,
+.knitwear-form__option-state:hover,
+.knitwear-form__option-state:active {
+  outline: none;
+  border-bottom: 2px solid $soft-green-active;
+}
+
+.knitwear-form__option-additional {
+  @include form-text;
+  border: none;
+  outline: 2px solid $black;
+}
+
+.knitwear-form__option-additional:focus,
+.knitwear-form__option-additional:hover,
+.knitwear-form__option-additional:active {
+  outline: 2px solid $soft-green-active;
+}
+
+.knitwear-form__tagline {
+  font-size: 13px;
+}

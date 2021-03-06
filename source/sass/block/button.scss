@@ -1,0 +1,28 @@
+.button {
+  font: inherit;
+  color: $dark-grey-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid $dark-grey-font;
+  background-color: $white;
+}
+
+.button:hover,
+.button:focus {
+  color: $white;
+  background-color: $dark-grey-font;
+}
+
+.button:active {
+  color: $white-opacity-third;
+  background-color: $dark-grey-font;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 17px;
+  }
+}

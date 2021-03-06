@@ -1,0 +1,40 @@
+.page-footer {
+  background-color: $dark-grey-background;
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 143px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__social {
+  height: 80px;
+  border-bottom: 1px solid $black-line;
+}
+
+.page-footer__copyright {
+  height: 79px;
+  width: 182px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__container {
+    flex-direction: row;
+  }
+
+  .page-footer__logo {
+    display: flex;
+  }
+
+  .page-footer__social {
+    height: 80px;
+    border-bottom: none;
+  }
+}

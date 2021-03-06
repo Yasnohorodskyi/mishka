@@ -1,0 +1,16 @@
+.popular-product__table {
+  display: table;
+  border-collapse: collapse;
+}
+
+.product-table__cell {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  border-bottom: 1px solid $soft-grey;
+  height: 37px;
+}
+
+.product-table__cell-name {
+  width: 100px;
+}

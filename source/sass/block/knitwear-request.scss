@@ -1,3 +1,25 @@
 .knitwear-request__description {
   font-size: 13px;
+  margin-bottom: 29px;
+
+  @include tablet {
+    margin-bottom: 63px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    box-sizing: border-box;
+    padding: 0 225px;
+  }
 }
+
+.knitwear-request {
+  display: flex;
+  flex-direction: column;
+}
+
+// .knitwear-request__form {
+//   display: flex;
+//   flex-direction: column;
+// }

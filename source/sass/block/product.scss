@@ -1,9 +1,16 @@
-.product__image {
-  background-color: $dark-grey-background;
-}
-
 .product__title {
   @include catalog-title;
+  @include margin-padding-zero;
+  margin-bottom: 6px;
+
+  @include tablet {
+    font-size: 20px;
+    margin-bottom: 9px;
+  }
+
+  @include desktop {
+    margin-bottom: 6px;
+  }
 }
 
 .product__title:focus,
@@ -18,11 +25,73 @@
 .product__description {
   font-size: 13px;
   line-height: 30px;
+
+  @include margin-padding-zero;
+  @include tablet {
+    font-size: 15px;
+  }
 }
 
 .product__price {
   font-weight: 700;
   font-size: 15px;
+
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+
+.product {
+  @include margin-padding-zero;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
+}
+
+
+.product__image-link {
+  background-color: $dark-grey-background;
+  display: flex;
+  justify-content: stretch;
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.product__image {
+  width: 100%;
+}
+
+.product__caption {
+  display: flex;
+  flex-grow: 1;
+  box-sizing: border-box;
+  flex-direction: column;
+  min-height: 179px;
+  padding: 28px 28px 0 28px;
+  border: 1px solid $soft-grey;
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .product__caption:focus,
@@ -33,4 +102,50 @@
 .product__caption:active,
 .product__caption:visited {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product__caption-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product__order {
+  display: flex;
+  height: 73px;
+  border-top: 1px solid $soft-grey;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__price-wrapper {
+  @include margin-padding-zero;
+}
+
+.product__order-button {
+  @include button-zero;
+  position: relative;
+  width: 21px;
+  height: 18px;
+}
+
+
+.product__order-button::after {
+  content: "";
+  position: absolute;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 21px;
+  height: 18px;
+  background-image: url("../img/cart.svg");
+}
+
+.product__order-button:hover::after,
+.product__order-button:focus::after {
+  background-image: url("../img/cart_g.svg");
+}
+
+.product__order-button:active::after {
+  background-image: url("../img/cart_lg.svg");
 }

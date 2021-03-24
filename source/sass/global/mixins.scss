@@ -40,6 +40,12 @@
   padding: 0;
 }
 
+@mixin button-zero {
+  @include margin-padding-zero;
+  background: none;
+  border: none;
+}
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;

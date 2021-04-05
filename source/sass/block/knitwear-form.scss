@@ -20,6 +20,10 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+
+  @include tablet {
+    font-size: 19px;
+  }
 }
 
 .knitwear-form__option-state {
@@ -33,7 +37,11 @@
   color: $black-visited;
   font-weight: 400;
   font-size: 17px;
-  line-height: 18px;
+  padding-top: 10px;
+
+  @include tablet {
+    font-size: 19px;
+  }
 }
 
 .knitwear-form__option-state:focus,
@@ -45,8 +53,16 @@
 
 .knitwear-form__option-additional {
   @include form-text;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px 17px 17px 17px;
+  height: 142px;
   border: none;
   outline: 2px solid $black;
+
+  @include desktop {
+    margin-right: 175px;
+  }
 }
 
 .knitwear-form__option-additional:focus,
@@ -58,3 +74,379 @@
 .knitwear-form__tagline {
   font-size: 13px;
 }
+
+.knitwear-form__field-light-wrapper {
+  @include forma-fildset-bottom;
+}
+
+// stiling the fieldset "Type"
+.knitwear-form__field-container {
+  display: grid;
+
+  @include tablet {
+    grid-template-columns: 167px 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 175px 1fr;
+  }
+}
+
+.knitwear-form__title-container {
+  display: flex;
+  height: 16px;
+  width: 100%;
+  align-items: center;
+
+  @include tablet {
+    grid-column: 1 / 2;
+    padding-top: 18px;
+  }
+}
+
+.knitwear-form__title-type {
+  margin-bottom: 30px;
+}
+
+.knitwear-form__title-wrapper {
+  display: block;
+  min-width: 60px;
+}
+
+.knitwear-form__title-line {
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid $soft-green-active;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+// stiling the fieldset "Type"
+
+.knitwear-form__list-group-type {
+  @include margin-padding-zero;
+  display: flex;
+  flex-direction: column;
+  height: 95px;
+  justify-content: space-between;
+
+  @include tablet {
+    height: 128px;
+  }
+}
+
+.knitwear-form__label-wrapper {
+  @include label-wrapper;
+}
+
+.knitwear-form__label-wrapper::before {
+  @include checkbox-input-wrapper;
+  border-radius: 50%;
+}
+
+// Form "Type" state
+.knitwear-form__field-input:hover + .knitwear-form__label-wrapper::before,
+.knitwear-form__field-input:focus + .knitwear-form__label-wrapper::before {
+  border: 2px solid $soft-green-active;
+}
+
+.knitwear-form__field-input:active + .knitwear-form__label-wrapper::before {
+  border: 2px solid $black-visited;
+}
+
+.knitwear-form__field-input:checked + .knitwear-form__label-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 12px;
+  border-radius: 50%;
+  background-color: $soft-green-active;
+
+  @include tablet {
+    left: 15px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.knitwear-form__field-input:checked:not(.knitwear-form__field-input:hover) + .knitwear-form__label-wrapper::before,
+.knitwear-form__field-input:checked:not(.knitwear-form__field-input:focus) + .knitwear-form__label-wrapper::before {
+  border: 2px solid $dark-grey-font;
+}
+
+// stiling the fieldset "Color"
+
+.knitwear-form__field-wrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 26px 0;
+    background-color: $dark-grey-background;
+  }
+
+  @include margin-padding-zero;
+  @include forma-fildset-bottom;
+}
+
+.knitwear-form__list-group-color {
+  @include margin-padding-zero;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.knitwear-form__title-color {
+  margin-bottom: 25px;
+}
+
+.knitwear-form__field-group-color {
+  display: flex;
+  width: 100%;
+  margin-bottom: 23px;
+
+  @include tablet {
+    flex-basis: calc(50% - 23px / 2);
+    margin-right: 23px;
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    flex-basis: 262px;
+    margin-right: 0;
+  }
+}
+
+.knitwear-form__field-group-color:last-child {
+  margin-bottom: 0;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+
+.knitwear-form__field-group-color:nth-child(2n) {
+  @include tablet {
+    margin-right: 0;
+  }
+}
+
+.knitwear-form__label-color-wrapper {
+  @include label-wrapper;
+}
+
+.knitwear-form__label-color-wrapper::before {
+  @include checkbox-input-wrapper;
+}
+
+// Form "color" state
+.knitwear-form__checkbox-option:hover + .knitwear-form__label-color-wrapper::before,
+.knitwear-form__checkbox-option:focus + .knitwear-form__label-color-wrapper::before {
+  border: 2px solid $soft-green-active;
+}
+
+.knitwear-form__checkbox-option:active + .knitwear-form__label-color-wrapper::before {
+  border: 2px solid $black-visited;
+}
+
+.knitwear-form__checkbox-option:checked + .knitwear-form__label-color-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 16px;
+  left: 10px;
+  background-image: url("../img/ticks.svg");
+
+  @include tablet {
+    width: 32px;
+    height: 22px;
+    background-image: url("../img/tickm.svg");
+  }
+}
+
+.knitwear-form__checkbox-option:checked:not(.knitwear-form__checkbox-option:hover) + .knitwear-form__label-color-wrapper::before,
+.knitwear-form__checkbox-option:checked:not(.knitwear-form__checkbox-option:focus) + .knitwear-form__label-color-wrapper::before {
+  border: 2px solid $dark-grey-font;
+}
+
+// stiling the fieldset "Full name"
+.knitwear-form__list-group-fullname {
+  @include margin-padding-zero;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    padding-right: 175px;
+  }
+}
+
+.knitwear-form__title-fullname {
+  margin-bottom: 29px;
+}
+
+.knitwear-form__field-group-fullname {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+
+  @include tablet {
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+}
+
+.knitwear-form__field-group-fullname:last-child {
+  margin-bottom: 0;
+}
+
+.knitwear-form__label-fullname-wrapper {
+  display: flex;
+
+  @include tablet {
+    align-items: center;
+    margin-right: 25px;
+  }
+}
+
+.knitwear-form__option-text {
+  @include option-text;
+}
+
+// stiling the fieldset "Contact"
+.knitwear-form__title-email-wrapper {
+  display: block;
+  min-width: 78px;
+}
+
+.knitwear-form__field-phone {
+  margin-bottom: 34px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.knitwear-form__field-email {
+  @include tablet {
+    margin-bottom: 26px;
+  }
+}
+
+.knitwear-form__option-phone-wrapper,
+.knitwear-form__option-email-wrapper {
+  @include option-text;
+  position: relative;
+
+  @include desktop {
+    box-sizing: border-box;
+    padding-right: 175px;
+  }
+}
+
+.knitwear-form__option-phone-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  top: 11px;
+  right: 7px;
+  background-image: url("../img/phone.svg");
+
+  @include tablet {
+    right: 26px;
+  }
+
+  @include desktop {
+    right: 183px;
+  }
+}
+
+.knitwear-form__option-email-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 21px;
+  top: 16px;
+  right: 3px;
+  background-image: url("../img/mail.svg");
+
+  @include tablet {
+    right: 22px;
+  }
+
+  @include desktop {
+    right: 179px;
+  }
+}
+
+.knitwear-form__option-contact {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+
+  @include desktop {
+    padding-right: 175px;
+  }
+}
+
+// stiling the fieldset "Addition"
+.knitwear-form__field-last-fieldset-wrapper {
+  margin-bottom: 17px;
+
+  @include tablet {
+    margin-bottom: 53px;
+  }
+
+  @include desktop {
+    margin-bottom: 49px;
+  }
+}
+
+.knitwear-form__title-additional {
+  margin-bottom: 23px;
+}
+
+.knitwear-form__bottom {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.knitwear-form__tagline-wrapper {
+  margin-bottom: 30px;
+
+  @include desktop {
+    margin-right: 175px;
+  }
+}
+
+.knitwear-form__button {
+  height: 52px;
+  width: 100%;
+  margin-bottom: 55px;
+
+  @include tablet {
+    width: 230px;
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    margin-left: 175px;
+  }
+}
+

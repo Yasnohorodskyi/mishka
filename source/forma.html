@@ -8,26 +8,38 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__container container">
+      <div class="page-header__container ">
         <a class="page-header__logo">
           <img src="https://via.placeholder.com/85x36" alt="Интернет-магазин «Мишка»">
         </a>
-        <nav class="page-header__nav main-nav">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог  товаров</a>
-              <a class="main-nav__link" href="forma.html">Вязание на заказ</a>
+        <nav class="page-header__nav main-nav container-full">
+          <button class="main-nav__toggle" type="button">X<span class="visually-hidden">Открыть/Закрыть меню</span></button>
+          <ul class="main-nav__list main-nav__list-navigation">
+            <li class="main-nav__item main-nav__product-navigation">
+              <div class="main-nav__item-product-wrapper">
+                <a class="main-nav__link main-nav__link--mobi main-nav__link--product" href="catalog.html">Каталог  товаров</a>
+              </div>
+              <div class="main-nav__item-product-wrapper">
+                <a class="main-nav__link main-nav__link--mobi main-nav__link--product" href="forma.html">Вязание на заказ</a>
+              </div>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--search" href="#"><span class="main-nav__search-field">Поиск по сайту</span></a>
-              <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+            <li class="main-nav__item main-nav__user-navigation">
+              <div class="main-nav__item-user-wrapper">
+                <a class="main-nav__link main-nav__link--mobi main-nav__link--search" href="#"><span class="main-nav__search-field">Поиск по сайту</span></a>
+              </div>
+              <div class="main-nav__item-user-wrapper">
+                <a class="main-nav__link main-nav__link--mobi main-nav__link--cart" href="#">Корзина: пока пуста</a>
+              </div>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Новые поступления</a>
-              <a class="main-nav__link" href="#">Распродажа</a>
+            <li class="main-nav__item main-nav__sales-navigation">
+              <div class="main-nav__item-sales-wrapper">
+                <a class="main-nav__link main-nav__link--mobi main-nav__link--sales" href="#">Новые поступления</a>
+              </div>
+              <div class="main-nav__item-sales-wrapper">
+                <a class="main-nav__link main-nav__link--mobi main-nav__link--sales" href="#">Распродажа</a>
+              </div>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__feature-navigation">
               <p class="main-nav__feature">Бесплатная доставка по России</p>
             </li>
           </ul>
@@ -37,96 +49,120 @@
     <main class="page-main">
       <h1 class="visually-hidden">Форма заказа индивидуальных вязанных изделий в интернет-магазине Мишка</h1>
       <section class="innerpage-main">
-        <div class="innerpage-main__container container">
-          <h2 class="innerpage-main__title">Вязание на заказ</h2>
-        </div>
+        <h2 class="innerpage-main__title">Вязание на заказ</h2>
       </section>
       <section class="knitwear-request">
         <h2 class="knitwear-request__title visually-hidden">Форма заказа</h2>
-        <p class="knitwear-request__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <div class="knitwear-request__container container">
-          <form class="knitwear-request__form knitwear-form " action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="knitwear-form__field">
-              <legend class="knitwear-form__title">Тип</legend>
+        <p class="knitwear-request__description container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="knitwear-request__form knitwear-form " action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="knitwear-form__field knitwear-form__field-light-wrapper container">
+            <div class="knitwear-form__field-container">
+              <div class="knitwear-form__title-container knitwear-form__title-type">
+                <legend class="knitwear-form__title knitwear-form__title-wrapper">Тип</legend>
+                <span class="knitwear-form__title-line"></span>
+              </div>
               <ul class="knitwear-form__list-group-type">
                 <li class="knitwear-form__field-group-type">
-                  <input class="knitwear-form__radio-option" type="radio" id="type-interior" name="product-type" value="interior" checked>
-                  <label class="knitwear-form__label" for="type-interior">Аксессуар для интерьера</label>
+                  <input class="knitwear-form__field-input visually-hidden" type="radio" id="type-interior" name="product-type" value="interior" >
+                  <label class="knitwear-form__label knitwear-form__label-wrapper" for="type-interior">Аксессуар для интерьера</label>
                 </li>
                 <li class="knitwear-form__field-group-type">
-                  <input class="knitwear-form__radio-option" type="radio" id="type-toy" name="product-type" value="toy">
-                  <label class="knitwear-form__label" for="type-toy">Детская игрушка</label>
+                  <input class="knitwear-form__field-input visually-hidden" type="radio" id="type-toy" name="product-type" value="toy" checked>
+                  <label class="knitwear-form__label knitwear-form__label-wrapper" for="type-toy">Детская игрушка</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="knitwear-form__field">
-              <legend class="knitwear-form__title">Цвет</legend>
+          </div>
+          </fieldset>
+          <fieldset class="knitwear-form__field knitwear-form__field-wrapper">
+            <div class="knitwear-form__field-container container">
+              <div class="knitwear-form__title-container knitwear-form__title-color">
+                <legend class="knitwear-form__title knitwear-form__title-wrapper">Цвет</legend>
+                <span class="knitwear-form__title-line"></span>
+              </div>
               <ul class="knitwear-form__list-group-color">
-                <li class="knitwear-form__field-group-gitcolor">
-                  <input class="knitwear-form__checkbox-option" type="checkbox" id="color-white" name="product-color" value="white" checked>
-                  <label class="knitwear-form__label" for="color-white">Белый</label>
+                <li class="knitwear-form__field-group-color">
+                  <input class="knitwear-form__checkbox-option visually-hidden" type="checkbox" id="color-white" name="product-color" value="white" checked>
+                  <label class="knitwear-form__label knitwear-form__label-color-wrapper" for="color-white">Белый</label>
                 </li>
                 <li class="knitwear-form__field-group-color">
-                  <input class="knitwear-form__checkbox-option" type="checkbox" id="color-grey" name="product-color" value="grey" checked>
-                  <label class="knitwear-form__label" for="color-grey">Серый</label>
+                  <input class="knitwear-form__checkbox-option visually-hidden" type="checkbox" id="color-grey" name="product-color" value="grey" checked>
+                  <label class="knitwear-form__label knitwear-form__label-color-wrapper" for="color-grey">Серый</label>
                 </li>
                 <li class="knitwear-form__field-group-color">
-                  <input class="knitwear-form__checkbox-option" type="checkbox" id="color-tiffany" name="product-color" value="tiffany">
-                  <label class="knitwear-form__label" for="color-tiffany">«Тиффани»</label>
+                  <input class="knitwear-form__checkbox-option visually-hidden" type="checkbox" id="color-tiffany" name="product-color" value="tiffany">
+                  <label class="knitwear-form__label knitwear-form__label-color-wrapper" for="color-tiffany">«Тиффани»</label>
                 </li>
                 <li class="knitwear-form__field-group-color">
-                  <input class="knitwear-form__checkbox-option" type="checkbox" id="color-black" name="product-color" value="black">
-                  <label class="knitwear-form__label" for="color-black">Черный</label>
+                  <input class="knitwear-form__checkbox-option visually-hidden" type="checkbox" id="color-black" name="product-color" value="black">
+                  <label class="knitwear-form__label knitwear-form__label-color-wrapper" for="color-black">Черный</label>
                 </li>
                 <li class="knitwear-form__field-group-color">
-                  <input class="knitwear-form__checkbox-option" type="checkbox" id="color-pink" name="product-color" value="pink">
-                  <label class="knitwear-form__label" for="color-pink">Розовый</label>
+                  <input class="knitwear-form__checkbox-option visually-hidden" type="checkbox" id="color-pink" name="product-color" value="pink">
+                  <label class="knitwear-form__label knitwear-form__label-color-wrapper" for="color-pink">Розовый</label>
                 </li>
                 <li class="knitwear-form__field-group-color">
-                  <input class="knitwear-form__checkbox-option" type="checkbox" id="color-orange" name="product-color" value="orange">
-                  <label class="knitwear-form__label" for="color-orange">Оранжевый</label>
+                  <input class="knitwear-form__checkbox-option visually-hidden" type="checkbox" id="color-orange" name="product-color" value="orange">
+                  <label class="knitwear-form__label knitwear-form__label-color-wrapper" for="color-orange">Оранжевый</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="knitwear-form__field ">
-              <legend class="knitwear-form__title">Фио</legend>
+            </div>
+          </fieldset>
+          <fieldset class="knitwear-form__field knitwear-form__field-light-wrapper container">
+            <div class="knitwear-form__field-container">
+              <div class="knitwear-form__title-container knitwear-form__title-fullname">
+                <legend class="knitwear-form__title knitwear-form__title-wrapper">Фио</legend>
+                <span class="knitwear-form__title-line"></span>
+              </div>
               <ul class="knitwear-form__list-group-fullname">
                 <li class="knitwear-form__field-group-fullname">
-                  <label class="knitwear-form__label" for="first-name">Имя:</label>
+                  <label class="knitwear-form__label knitwear-form__label-fullname-wrapper" for="first-name">Имя:</label>
                   <input class="knitwear-form__option-text knitwear-form__option-state" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
                 </li>
                 <li class="knitwear-form__field-group-fullname">
-                  <label class="knitwear-form__label" for="last-name">Фамилия:</label>
+                  <label class="knitwear-form__label knitwear-form__label-fullname-wrapper" for="last-name">Фамилия:</label>
                   <input class="knitwear-form__option-text knitwear-form__option-state" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
                 </li>
                 <li class="knitwear-form__field-group-fullname">
-                  <label class="knitwear-form__label" for="middle-name">Отчество:</label>
+                  <label class="knitwear-form__label knitwear-form__label-fullname-wrapper" for="middle-name">Отчество:</label>
                   <input class="knitwear-form__option-text knitwear-form__option-state" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="knitwear-form__field">
-              <legend class="knitwear-form__title">тел</legend>
-              <div class="knitwear-form__field-group-phone">
-                <input class="knitwear-form__option-phone knitwear-form__option-state" type="tel" name="phone" pattern="\+7 \d\d\d \d\d\d \d\d \d\d" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            </div>
+          </fieldset>
+          <div class="knitwear-form__field-wrapper">
+            <fieldset class="knitwear-form__field knitwear-form__field-container knitwear-form__field-phone container">
+              <div class="knitwear-form__title-container">
+                <legend class="knitwear-form__title knitwear-form__title-wrapper">тел</legend>
+                <span class="knitwear-form__title-line"></span>
+              </div>
+              <div class="knitwear-form__option-phone-wrapper">
+                <input class="knitwear-form__option-contact knitwear-form__option-state" type="tel" name="phone" pattern="\+7 \d\d\d \d\d\d \d\d \d\d" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               </div>
             </fieldset>
-            <fieldset class="knitwear-form__field">
-              <legend class="knitwear-form__title">E-mail</legend>
-              <div class="knitwear-form__field-group-email">
-                <input class="knitwear-form__option-email knitwear-form__option-state" type="email" name="email" placeholder="Ваш Email*" required>
+            <fieldset class="knitwear-form__field knitwear-form__field-container knitwear-form__field-email container">
+              <div class="knitwear-form__title-container">
+                <legend class="knitwear-form__title knitwear-form__title-email-wrapper">E-mail</legend>
+                <span class="knitwear-form__title-line"></span>
+              </div>
+              <div class="knitwear-form__option-email-wrapper">
+                <input class="knitwear-form__option-contact knitwear-form__option-state" type="email" name="email" placeholder="Ваш Email*" required>
               </div>
             </fieldset>
-            <fieldset class="knitwear-form__field">
-              <legend class="knitwear-form__title">Доп</legend>
-              <div class="knitwear-form__field-group-additional">
-                <textarea class="knitwear-form__option-additional" name="additional-information" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+          <fieldset class="knitwear-form__field knitwear-form__field-last-fieldset-wrapper container">
+            <div class="knitwear-form__field-container">
+              <div class="knitwear-form__title-container knitwear-form__title-fullname">
+                <legend class="knitwear-form__title knitwear-form__title-wrapper">Доп</legend>
+                <span class="knitwear-form__title-line"></span>
               </div>
-            </fieldset>
-            <small class="knitwear-form__tagline">*Поля обязательны для заполнения</small>
+              <textarea class="knitwear-form__field-additional knitwear-form__option-additional" name="additional-information" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+          </fieldset>
+          <div class="knitwear-form__bottom container">
+            <small class="knitwear-form__tagline knitwear-form__tagline-wrapper">*Поля обязательны для заполнения</small>
             <button class="knitwear-form__button button" type="submit">Отправить заказ</button>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
@@ -135,27 +171,27 @@
           <img src="https://via.placeholder.com/85x36" alt="Интернет-магазин «Мишка»">
         </a>
         <div class="page-footer__social social">
-          <ul class="social__list">
+          <ul class="social__list social__list-wrapper">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#">
-                <span class="visually-hidden">Мы в Инстаграм</span>
+                I<span class="visually-hidden">Мы в Инстаграм</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
+                F<span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#">
-                <span class="visually-hidden">Мы в Твиттер</span>
+                T<span class="visually-hidden">Мы в Твиттер</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
             <b class="copyright__text">Разработано</b>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">H<span class="visually-hidden">HTML Academy</span></a>
         </div>
       </div>
     </footer>

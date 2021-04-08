@@ -1,9 +1,27 @@
 .about-us {
   margin-bottom: 27px;
+
+  @include tablet {
+    margin-bottom: 28px;
+  }
+
+  @include desktop {
+    margin-bottom: 38px;
+  }
 }
 
 .about-us__title {
   @include title-mob;
+
+  @include tablet {
+    @include title-table;
+    margin-bottom: 41px;
+  }
+
+  @include desktop {
+    @include title-desktop;
+    margin-bottom: 39px;
+  }
 }
 
 .about-us__list {
@@ -16,6 +34,11 @@
   line-height: 20px;
 
   @include margin-padding-zero;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .about-us__container {
@@ -26,18 +49,38 @@
 .about-us__title-wrapper {
   @include margin-padding-zero;
   margin-bottom: 28px;
+
+  @include desktop {
+    margin-left: 175px;
+  }
 }
 
 .about-us__list-wrapper {
   @include margin-padding-zero;
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    flex-wrap: wrap;
+    height: 474px;
+  }
+
+  @include desktop {
+    margin: 0 175px;
+    height: 465px;
+  }
 }
 
 .about-us__item {
   @include margin-padding-zero;
   height: 94px;
   margin-bottom: 29px;
+
+  @include tablet {
+    @include margin-padding-zero;
+    width: 50%;
+    margin-bottom: 55px;
+  }
 }
 
 .about-us__item-wrapper {
@@ -45,49 +88,32 @@
   align-items: flex-end;
 }
 
-@media (min-width: $tablet-width) {
-  .about-us {
-    margin-bottom: 28px;
-  }
-
-  .about-us__title {
-    @include title-table;
-    margin-bottom: 41px;
-  }
-
-  .about-us__list-wrapper {
-    flex-wrap: wrap;
-    height: 474px;
-  }
-
-  .about-us__item {
-    @include margin-padding-zero;
-    width: 50%;
-    margin-bottom: 55px;
-  }
-
-  .about-us__description {
-    font-size: 20px;
-    line-height: 22px;
-  }
+.about-us__item--eco {
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
 }
 
-@media (min-width: $desktop-width) {
-  .about-us {
-    margin-bottom: 38px;
-  }
+.about-us__item--style {
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+}
 
-  .about-us__title {
-    @include title-desktop;
-    margin-bottom: 39px;
-  }
+.about-us__item--like {
+  background-image: url("../img/icon-5.svg");
+  background-repeat: no-repeat;
+}
 
-  .about-us__title-wrapper {
-    margin-left: 175px;
-  }
+.about-us__item--handmade {
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+}
 
-  .about-us__list-wrapper {
-    margin: 0 175px;
-    height: 465px;
-  }
+.about-us__item--manufacturer {
+  background-image: url("../img/icon-4.svg");
+  background-repeat: no-repeat;
+}
+
+.about-us__item--present {
+  background-image: url("../img/icon-6.svg");
+  background-repeat: no-repeat;
 }

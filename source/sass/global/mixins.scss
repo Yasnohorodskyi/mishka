@@ -1,3 +1,16 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @mixin title-mob {
   font-weight: 700;
   font-size: 25px;
@@ -13,6 +26,18 @@
 @mixin title-desktop {
   font-size: 53px;
   line-height: 57px;
+}
+
+@mixin nav-item-product-user-wrapper {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 79px;
+  border-bottom: 1px solid $black-line;
+
+  @include tablet {
+    border-bottom: none;
+  }
 }
 
 @mixin form-text {
@@ -55,6 +80,76 @@
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (min-width: $mobile-width-only) {
+    @content;
+  }
+}
+
+
+@mixin icon-state {
+  fill: $black;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    fill: $light-soft-green;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin icon-form-state {
+  fill: $black;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    fill: $soft-green-active;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin footer-icon {
+  &:hover,
+  &:focus {
+    fill: $dark-soft-green-hover;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin zigzag {
+  @include tablet {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    display: block;
+    height: 24px;
+    width: 100%;
+    background-image: url("../img/zigzag-fill-tablet.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 770px 24px;
+  }
+
+  @include desktop {
+    bottom: -19px;
+    height: 34px;
+    background-size: 1250px 34px;
   }
 }
 
@@ -106,7 +201,6 @@
 
   @include margin-padding-zero;
 }
-
 
 // Технические миксины
 

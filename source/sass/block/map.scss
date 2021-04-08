@@ -1,3 +1,21 @@
 .map {
   background-color: $dark-grey-background;
 }
+
+
+.map-link {
+  display: flex;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.map-link::after {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 100px;
+  top: calc(50% - 100px / 2);
+  left: calc(50% - 67px / 2);
+  background-image: url("../img/map-pin.svg");
+}

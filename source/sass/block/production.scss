@@ -7,9 +7,15 @@
   }
 }
 
-
 .production__description {
   font-size: 13px;
+
+  @include margin-padding-zero;
+  margin-bottom: 41px;
+
+  @include desktop {
+    margin-bottom: 51px;
+  }
 }
 
 .production__order-button {
@@ -109,22 +115,32 @@
   position: absolute;
 
   @include button-zero;
-  width: 122px;
-  height: 92px;
-  right: calc(50% - 122px / 2);
-  top: calc(50% - 92px / 2);
+  width: 101px;
+  height: 77px;
+  right: calc(50% - 101px / 2);
+  top: calc(50% - 77px / 2);
   background-image: url("../img/play.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
+  outline: none;
 
-.production__video-button:hover,
-.production__video-button:focus {
-  background-image: url("../img/play-hover.svg");
-}
+  &:hover,
+  &:focus {
+    width: 121px;
+    height: 92px;
+    right: calc(50% - 121px / 2);
+    top: calc(50% - 92px / 2);
+    background-size: 121px 92px;
+  }
 
-.production__video-button:active {
-  background-image: url("../img/play-active.svg");
+  &:active {
+    width: 81px;
+    height: 62px;
+    right: calc(50% - 81px / 2);
+    top: calc(50% - 62px / 2);
+    background-image: url("../img/play-active.svg");
+    background-size: 81px 62px;
+  }
 }
 
 .production__order {
@@ -138,15 +154,6 @@
 
   @include desktop {
     padding: 0 57px 60px 80px;
-  }
-}
-
-.production__description-wrapper {
-  @include margin-padding-zero;
-  margin-bottom: 41px;
-
-  @include desktop {
-    margin-bottom: 51px;
   }
 }
 

@@ -7,6 +7,12 @@
   text-transform: uppercase;
 
   @include margin-padding-zero;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 57px;
+    text-align: center;
+  }
 }
 
 .modal {
@@ -38,6 +44,12 @@
   box-shadow: 0 5px 10px $grey-modal-border;
 
   @include margin-padding-zero;
+
+  @include tablet {
+    width: 566px;
+    left: calc(50% - 556px / 2);
+    border: 1px solid $modal-background;
+  }
 }
 
 .modal__title-wrapper {
@@ -48,26 +60,12 @@
   margin-bottom: 22px;
   padding-left: 14px;
   padding-right: 14px;
-}
 
-@media (min-width: $tablet-width) {
-  .modal__container {
-    width: 566px;
-    left: calc(50% - 556px / 2);
-    border: 1px solid $modal-background;
-  }
-
-  .modal__title-wrapper {
+  @include tablet {
     display: block;
     box-sizing: border-box;
     width: 382px;
     margin-top: 37px;
     margin-bottom: 22px;
-  }
-
-  .modal__title {
-    font-size: 30px;
-    line-height: 57px;
-    text-align: center;
   }
 }

@@ -10,6 +10,7 @@
   @include tablet {
     height: 238px;
     margin-bottom: 54px;
+    position: relative;
   }
 
   @include desktop {
@@ -31,4 +32,8 @@
   @include desktop {
     @include title-desktop;
   }
+}
+
+.innerpage-main::after {
+  @include zigzag;
 }

@@ -2,6 +2,20 @@
   height: 489px;
   background-color: $soft-grey-background;
   margin-bottom: 31px;
+  position: relative;
+
+  @include tablet {
+    height: 763px;
+    margin-bottom: 39px;
+  }
+
+  @include desktop {
+    margin-bottom: 54px;
+  }
+}
+
+.promo::after {
+  @include zigzag;
 }
 
 .promo__container {
@@ -11,11 +25,29 @@
   display: grid;
   height: 100%;
   align-items: end;
+
+  @include tablet {
+    background-image: url("../img/hero-desktop 2.jpg");
+    background-position: center;
+  }
+
+  @include desktop {
+    background-image: url("../img/hero-desktop 1.jpg");
+    background-position: center;
+  }
 }
 
 .promo__title {
   @include title-mob;
   font-size: 27px;
+
+  @include tablet {
+    @include title-table;
+  }
+
+  @include desktop {
+    @include title-desktop;
+  }
 }
 
 .promo__title--wrapper {
@@ -24,39 +56,8 @@
   margin-top: 73px;
   min-width: 260px;
   text-align: center;
-}
 
-@media (min-width: $tablet-width) {
-  .promo {
-    height: 763px;
-    margin-bottom: 39px;
-  }
-
-  .promo__container {
-    background-image: url("../img/hero-desktop 2.jpg");
-    background-position: center;
-  }
-
-  .promo__title {
-    @include title-table;
-  }
-
-  .promo__title--wrapper {
+  @include tablet {
     margin-top: 165px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .promo {
-    margin-bottom: 54px;
-  }
-
-  .promo__container {
-    background-image: url("../img/hero-desktop 1.jpg");
-    background-position: center;
-  }
-
-  .promo__title {
-    @include title-desktop;
   }
 }

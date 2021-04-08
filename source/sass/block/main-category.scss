@@ -4,14 +4,105 @@
   padding: 0;
   display: grid;
   align-items: stretch;
+
+  @include tablet {
+    grid-template-columns: 50px 1fr 1fr 50px;
+    align-items: end;
+  }
 }
 
 .main-category__item--decor {
   background-color: $light-soft-green;
+
+  .main-category__link-decor-icon {
+    position: absolute;
+    top: 23px;
+    right: 36px;
+
+    fill: $green-icon;
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-soft-green-hover;
+
+    .main-category__link-decor-icon {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    background-color: $light-soft-green-hover;
+
+    .main-category__link-decor-icon {
+      opacity: 0.3;
+    }
+  }
+
+  @include tablet {
+    grid-column: 2 / 3;
+
+    .main-category__link-decor-icon {
+      top: 31px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      height: 124px;
+    }
+  }
 }
 
 .main-category__item--toys {
   background-color: $dark-soft-green;
+
+  .main-category__link-toys-icon {
+    position: absolute;
+    top: 21px;
+    right: 27px;
+
+    fill: $green-icon;
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $dark-soft-green-hover;
+
+    .main-category__link-toys-icon {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    background-color: $dark-soft-green-hover;
+
+    .main-category__link-toys-icon {
+      opacity: 0.3;
+    }
+  }
+
+  @include tablet {
+    grid-column: 3 / 4;
+
+    .main-category__link-toys-icon {
+      top: 31px;
+      right: 33px;
+    }
+
+    &:hover,
+    &:focus {
+      height: 124px;
+    }
+  }
+
+  @include desktop {
+    .main-category__link-toys-icon {
+      right: 35px;
+    }
+  }
 }
 
 .main-category__link {
@@ -19,70 +110,36 @@
   font-size: 19px;
   line-height: 24px;
   color: $white;
-}
 
-.main-category__item--decor:hover,
-.main-category__item--decor:focus,
-.main-category__item--decor:active {
-  background-color: $light-soft-green-hover;
-}
-
-.main-category__item--toys:hover,
-.main-category__item--toys:focus,
-.main-category__item--toys:active {
-  background-color: $dark-soft-green-hover;
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .main-category__item {
   display: grid;
   height: 103px;
   align-items: start;
+  min-width: 100%;
+  position: relative;
+
+  @include tablet {
+    height: 119px;
+  }
 }
 
 .main-category__link--wrapper {
-  display: block;
+  display: flex;
+  box-sizing: border-box;
   width: 110px;
   padding-top: 24px;
   padding-left: 30px;
-}
 
-@media (min-width: $tablet-width) {
-  .main-category__link {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .main-category__item {
-    height: 119px;
-  }
-
-  .main-category__link--wrapper {
+  @include tablet {
     display: block;
     width: 115px;
     padding-top: 33px;
     padding-left: 36px;
-  }
-
-  .main-category {
-    grid-template-columns: 50px 1fr 1fr 50px;
-    align-items: end;
-  }
-
-  .main-category__item--decor {
-    grid-column: 2 / 3;
-  }
-
-  .main-category__item--toys {
-    grid-column: 3 / 4;
-  }
-
-  .main-category__item--decor:hover,
-  .main-category__item--decor:focus {
-    height: 124px;
-  }
-
-  .main-category__item--toys:hover,
-  .main-category__item--toys:focus {
-    height: 124px;
   }
 }

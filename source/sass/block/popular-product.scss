@@ -1,22 +1,55 @@
 .popular-product {
   margin-bottom: 31px;
+
+  @include tablet {
+    margin-bottom: 125px;
+  }
+
+  @include desktop {
+    margin-bottom: 68px;
+  }
 }
 
 .popular-product__title {
   @include title-mob;
   margin: 0;
   padding: 0;
-}
 
-.popular-product__title::after {
-  content: "Товар недели";
-  color: $light-soft-green;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
+  &::after {
+    content: "Товар недели";
+    color: $light-soft-green;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
 
-  text-transform: uppercase;
-  display: block;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  @include tablet {
+    @include title-table;
+
+    &::after {
+      width: 126px;
+      text-align: center;
+      position: relative;
+      left: calc(100% - 126px);
+      bottom: 47px;
+    }
+  }
+
+  @include desktop {
+    @include title-desktop;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    &::after {
+      position: absolute;
+      bottom: 15px;
+      left: -144px;
+    }
+  }
 }
 
 .popular-product__description {
@@ -26,11 +59,32 @@
   text-align: left;
   margin: 0;
   padding: 0;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .popular-product__picture {
   background-color: $dark-grey-background;
   margin-bottom: 26px;
+
+  @include tablet {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    margin-bottom: 0;
+    display: grid;
+    align-self: end;
+  }
+
+  @include desktop {
+    grid-column: 4 / -1;
+    grid-row: 1 / -2;
+    margin-bottom: 0;
+    display: grid;
+    align-self: end;
+  }
 }
 
 .popular-product__price {
@@ -38,29 +92,120 @@
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .popular-product__price-wrapper {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
+
+  @include tablet {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    margin: 0;
+    align-self: end;
+  }
+
+  @include desktop {
+    grid-column: 2 / 3;
+  }
 }
 
 .popular-product__container {
+  position: relative;
   display: grid;
+
+  @include tablet {
+    grid-template-columns: 1fr 334px;
+    grid-template-rows: 127px 130px 120px 82px 85px;
+    column-gap: 42px;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 291px 58px 2fr 1fr;
+    grid-template-rows: 172px 125px 174px 137px 82px 96px;
+    column-gap: 0;
+  }
+}
+
+.popular-product__container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  background-image: url("../img/zigzag-line-desktop.svg");
+  background-size: 320px 8px;
+  background-repeat: repeat;
+  background-position: bottom 0 left -30px;
+
+  @include tablet {
+    bottom: -69px;
+    height: 17px;
+    background-size: 772px 17px;
+  }
+
+  @include desktop {
+    bottom: 0;
+    height: 23px;
+    background-size: 1050px 23px;
+    background-position: bottom 0 left 50px;
+    background-repeat: no-repeat;
+  }
 }
 
 .popular-product__title-wrapper {
   margin-bottom: 17px;
+
+  @include tablet {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin: 0;
+  }
+
+  @include desktop {
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    margin: 0;
+    z-index: 1;
+    align-self: end;
+    position: relative;
+  }
 }
 
 .popular-product__description-wrapper {
   margin-bottom: 23px;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+  }
 }
 
 .popular-product__table {
   display: block;
   margin-bottom: 28px;
+
+  @include tablet {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin: 0;
+  }
+
+  @include desktop {
+    grid-column: 2 / 3;
+    align-self: end;
+  }
 }
 
 .popular-product__image {
@@ -77,47 +222,8 @@
   display: grid;
   align-items: start;
   height: 94px;
-}
 
-@media (min-width: $tablet-width) {
-  .popular-product__container {
-    grid-template-columns: 1fr 334px;
-    grid-template-rows: 127px 130px 120px 82px 85px;
-    column-gap: 42px;
-  }
-
-  .popular-product__title-wrapper {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    margin: 0;
-  }
-
-  .popular-product__title {
-    @include title-table;
-  }
-
-  .popular-product__title::after {
-    width: 126px;
-    text-align: center;
-    position: relative;
-    left: calc(100% - 126px);
-    bottom: 47px;
-  }
-
-  .popular-product__table {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    margin: 0;
-  }
-
-  .popular-product__price-wrapper {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    margin: 0;
-    align-self: end;
-  }
-
-  .popular-product__order-wrapper {
+  @include tablet {
     grid-column: 1 / 2;
     grid-row: 5 / -1;
     margin: 0;
@@ -125,83 +231,7 @@
     height: 52px;
   }
 
-  .popular-product__picture {
-    grid-column: 2 / -1;
-    grid-row: 2 / -1;
-    margin-bottom: 0;
-    display: grid;
-    align-self: end;
-  }
-
-  .popular-product__description-wrapper {
-    margin: 0;
-  }
-
-  .popular-product__description {
-    font-size: 17px;
-    line-height: 30px;
-  }
-
-  .popular-product__price {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .popular-product__container {
-    grid-template-columns: 1fr 291px 58px 2fr 1fr;
-    grid-template-rows: 172px 125px 174px 137px 82px 96px;
-    column-gap: 0;
-  }
-
-  .popular-product__title-wrapper {
-    grid-column: 2 / 5;
-    grid-row: 1 / 2;
-    margin: 0;
-    z-index: 1;
-    align-self: end;
-
-    position: relative;
-  }
-
-  .popular-product__title {
-    @include title-desktop;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  .popular-product__title::after {
-    position: absolute;
-    bottom: 15px;
-    left: -144px;
-  }
-
-  .popular-product__picture {
-    grid-column: 4 / -1;
-    grid-row: 1 / -2;
-    margin-bottom: 0;
-    display: grid;
-    align-self: end;
-  }
-
-  .popular-product__description-wrapper {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    align-self: end;
-  }
-
-  .popular-product__table {
-    grid-column: 2 / 3;
-    align-self: end;
-  }
-
-  .popular-product__price-wrapper {
-    grid-column: 2 / 3;
-  }
-
-  .popular-product__order-wrapper {
+  @include desktop {
     grid-column: 2 / 3;
     grid-row: 5 / -2;
   }

@@ -2,16 +2,12 @@
   min-width: 260px;
   margin: 0;
   padding: 0 30px;
-}
 
-@media (min-width: $tablet-width) {
-  .container {
+  @include tablet {
     padding: 0 50px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .container {
+  @include desktop {
     width: 1050px;
     margin: 0 auto;
   }

@@ -12,6 +12,11 @@
   line-height: 30px;
   text-align: center;
   margin-bottom: 27px;
+
+  @include tablet {
+    font-size: 17px;
+    margin-bottom: 24px;
+  }
 }
 
 .order-form__button {
@@ -26,17 +31,17 @@
   width: 100%;
 
   @include margin-padding-zero;
-}
 
-.order-form__button:hover,
-.order-form__button:focus {
-  background-color: $dark-soft-green-hover;
-}
+  &:hover,
+  :focus {
+    background-color: $dark-soft-green-hover;
+  }
 
-.order-form__button:active {
-  background-color: $white;
-  border: 2px solid $light-soft-green;
-  color: $light-soft-green;
+  &:active {
+    background-color: $white;
+    border: 2px solid $light-soft-green;
+    color: $light-soft-green;
+  }
 }
 
 .order-form__fields-wrapper {
@@ -44,6 +49,13 @@
   width: 260px;
   height: 52px;
   justify-content: space-between;
+
+  @include tablet {
+    display: flex;
+    width: 350px;
+    height: 52px;
+    justify-content: space-between;
+  }
 }
 
 .order-form__field {
@@ -53,15 +65,19 @@
   border: 2px solid $dark-grey-border-point-one;
   align-items: center;
   justify-content: center;
-}
 
-.order-form__field:hover,
-.order-form__field:focus {
-  border: 2px solid $dark-grey-border-point-three;
-}
+  &:hover,
+  &:focus {
+    border: 2px solid $dark-grey-border-point-three;
+  }
 
-.order-form__field:active {
-  border: 2px solid $soft-green-active;
+  &:active {
+    border: 2px solid $soft-green-active;
+  }
+
+  @include tablet {
+    width: 108px;
+  }
 }
 
 .order-form__option {
@@ -80,26 +96,8 @@
   width: 260px;
   height: 52px;
   justify-content: center;
-}
 
-@media (min-width: $tablet-width) {
-  .order-form__title {
-    font-size: 17px;
-    margin-bottom: 24px;
-  }
-
-  .order-form__fields-wrapper {
-    display: flex;
-    width: 350px;
-    height: 52px;
-    justify-content: space-between;
-  }
-
-  .order-form__field {
-    width: 108px;
-  }
-
-  .order-form__button-wrapper {
+  @include tablet {
     width: 350px;
   }
 }

@@ -8,6 +8,10 @@
   text-transform: uppercase;
   border: 2px solid $dark-grey-font;
   background-color: $white;
+
+  @include tablet {
+    font-size: 17px;
+  }
 }
 
 .button:hover,
@@ -19,10 +23,4 @@
 .button:active {
   color: $white-opacity-third;
   background-color: $dark-grey-font;
-}
-
-@media (min-width: $tablet-width) {
-  .button {
-    font-size: 17px;
-  }
 }

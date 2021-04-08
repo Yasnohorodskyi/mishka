@@ -30,6 +30,13 @@
   @include form-text;
   border: none;
   border-bottom: 2px solid $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    border-bottom: 2px solid $soft-green-active;
+  }
 }
 
 .knitwear-form__option-state::placeholder,
@@ -44,13 +51,6 @@
   }
 }
 
-.knitwear-form__option-state:focus,
-.knitwear-form__option-state:hover,
-.knitwear-form__option-state:active {
-  outline: none;
-  border-bottom: 2px solid $soft-green-active;
-}
-
 .knitwear-form__option-additional {
   @include form-text;
   align-items: center;
@@ -60,15 +60,15 @@
   border: none;
   outline: 2px solid $black;
 
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 2px solid $soft-green-active;
+  }
+
   @include desktop {
     margin-right: 175px;
   }
-}
-
-.knitwear-form__option-additional:focus,
-.knitwear-form__option-additional:hover,
-.knitwear-form__option-additional:active {
-  outline: 2px solid $soft-green-active;
 }
 
 .knitwear-form__tagline {
@@ -231,7 +231,6 @@
   }
 }
 
-
 .knitwear-form__field-group-color:nth-child(2n) {
   @include tablet {
     margin-right: 0;
@@ -350,15 +349,15 @@
   }
 }
 
-.knitwear-form__option-phone-wrapper::before {
+.knitwear-form__option-phone-icon {
   content: "";
-  display: block;
   position: absolute;
   width: 25px;
   height: 24px;
   top: 11px;
   right: 7px;
-  background-image: url("../img/phone.svg");
+  fill: $black;
+  opacity: 0.2;
 
   @include tablet {
     right: 26px;
@@ -369,15 +368,15 @@
   }
 }
 
-.knitwear-form__option-email-wrapper::before {
+.knitwear-form__option-email-icon {
   content: "";
-  display: block;
   position: absolute;
   width: 32px;
   height: 21px;
   top: 16px;
   right: 3px;
-  background-image: url("../img/mail.svg");
+  fill: $black;
+  opacity: 0.2;
 
   @include tablet {
     right: 22px;
@@ -386,6 +385,14 @@
   @include desktop {
     right: 179px;
   }
+}
+
+.knitwear-form__option-state:focus + .knitwear-form__option-phone-icon,
+.knitwear-form__option-state:hover + .knitwear-form__option-phone-icon,
+.knitwear-form__option-state:focus + .knitwear-form__option-email-icon,
+.knitwear-form__option-state:hover + .knitwear-form__option-email-icon {
+  fill: $soft-green-active;
+  opacity: 1;
 }
 
 .knitwear-form__option-contact {
@@ -449,4 +456,3 @@
     margin-left: 175px;
   }
 }
-

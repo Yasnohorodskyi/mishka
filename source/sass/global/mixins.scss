@@ -77,6 +77,12 @@
   }
 }
 
+@mixin retina {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;

@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="page-header__container ">
         <div class="page-header__logo-wrapper">
-          <a class="page-header__logo" href="catalog.html">
+          <a class="page-header__logo" href="index.html">
             <img src="https://via.placeholder.com/85x36" alt="Интернет-магазин «Мишка»">
           </a>
         </div>
@@ -56,6 +56,7 @@
         </nav>
       </div>
     </header>
+
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазина Мишка: каталог товаров</h1>
       <section class="innerpage-main">
@@ -67,7 +68,11 @@
           <li class="catalog-list__item">
             <figure class="product">
               <a class="product__image-link" href="#">
-                <img class="product__image" src="https://via.placeholder.com/260x195" alt="Вязанный Зайчик-попрыгайчик">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="../img/photo-1-desktop.jpg 1x, ../img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="../img/photo-1-tablet.jpg 1x, ../img/photo-1-tablet@2x.jpg 2x">
+                  <img class="product__image" width="260px" height="195px" src="../img/photo-1-mobile.jpg" srcset="../img/photo-1-mobile@2x.jpg 2x" alt="Вязанный Зайчик-попрыгайчик">
+                </picture>
               </a>
               <figcaption class="product__caption">
                 <div class="product__caption-info">
@@ -78,7 +83,7 @@
                 </div>
                 <div class="product__order">
                   <p class="product__price product__price-wrapper">1 200 руб.</p>
-                  <button class="product__order-button" href="#">
+                  <button class="product__order-button product__order-button-click" href="#">
                     <svg class="product__order-button-ikon" width="21" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.47-1.02-.29s-.5.58-.3.96l3.15 5.8H5.77l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 007.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.29.81-.76 0-.48-.4-.76-.81-.76zm-4.57 9.62H5.07l-1.22-4.1h13.1l-1.33 4.1zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66z"/></svg>
                     <span class="visually-hidden">Заказать</span>
                   </button>
@@ -89,7 +94,11 @@
           <li class="catalog-list__item">
             <figure class="product">
               <a class="product__image-link" href="#">
-                <img class="product__image" src="https://via.placeholder.com/260x195" alt="Вязанный Зайчик-попрыгайчик">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="../img/photo-2-desktop.jpg 1x, ../img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="../img/photo-2-tablet.jpg 1x, ../img/photo-2-tablet@2x.jpg 2x">
+                  <img class="product__image" width="260px" height="195px" src="../img/photo-2-mobile.jpg" srcset="../img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                </picture>
               </a>
               <figcaption class="product__caption">
                 <div class="product__caption-info">
@@ -100,7 +109,7 @@
                 </div>
                 <div class="product__order">
                   <p class="product__price product__price-wrapper">690 руб.</p>
-                  <button class="product__order-button" href="#">
+                  <button class="product__order-button product__order-button-click" href="#">
                     <svg class="product__order-button-ikon" width="21" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.47-1.02-.29s-.5.58-.3.96l3.15 5.8H5.77l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 007.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.29.81-.76 0-.48-.4-.76-.81-.76zm-4.57 9.62H5.07l-1.22-4.1h13.1l-1.33 4.1zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66z"/></svg>
                     <span class="visually-hidden">Заказать</span>
                   </button>
@@ -111,7 +120,11 @@
           <li class="catalog-list__item">
             <figure class="product">
               <a class="product__image-link" href="#">
-                <img class="product__image" src="https://via.placeholder.com/260x195" alt="Вязанный Зайчик-попрыгайчик">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="../img/photo-3-desktop.jpg 1x, ../img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="../img/photo-3-tablet.jpg 1x, ../img/photo-3-tablet@2x.jpg 2x">
+                  <img class="product__image" width="260px" height="195px" src="../img/photo-3-mobile.jpg" srcset="../img/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+                </picture>
               </a>
               <figcaption class="product__caption">
                 <div class="product__caption-info">
@@ -122,7 +135,7 @@
                 </div>
                 <div class="product__order">
                   <p class="product__price product__price-wrapper">1 500 руб.</p>
-                  <button class="product__order-button" href="#">
+                  <button class="product__order-button product__order-button-click" href="#">
                     <svg class="product__order-button-ikon" width="21" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.47-1.02-.29s-.5.58-.3.96l3.15 5.8H5.77l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 007.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.29.81-.76 0-.48-.4-.76-.81-.76zm-4.57 9.62H5.07l-1.22-4.1h13.1l-1.33 4.1zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66z"/></svg>
                     <span class="visually-hidden">Заказать</span>
                   </button>
@@ -132,14 +145,18 @@
           </li>
         </ul>
       </section>
-      <article class="production container">
+      <article class="production">
         <div class="container">
           <div class="production__container">
             <div class="production-introduction">
               <h2 class="production__title">Процесс производства</h2>
             </div>
             <div class="production__video-block">
-              <video class="production__video" src="https://via.placeholder.com/260x150" poster="https://via.placeholder.com/260x150"></video>
+              <picture>
+                <source media="(min-width: 1150px)" srcset="../img/video-desktop.jpg 1x, ../img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="../img/video-tablet.jpg 1x, ../img/video-tablet@2x.jpg 2x">
+                <img class="production__video" src="../img/video-mobile.jpg" srcset="../img/video-mobile@2x.jpg 2x" alt="Процесс производства">
+              </picture>
               <button class="production__video-button">
                 <span class="visually-hidden">Показать видео</span>
               </button>
@@ -214,21 +231,7 @@
         </form>
       </div>
     </section>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/modal.js"></script>
   </body>
 </html>

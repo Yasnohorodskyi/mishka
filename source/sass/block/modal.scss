@@ -42,6 +42,7 @@
   border-top: 1px solid $modal-background;
   border-bottom: 1px solid $modal-background;
   box-shadow: 0 5px 10px $grey-modal-border;
+  animation: bounce 0.6s;
 
   @include margin-padding-zero;
 
@@ -67,5 +68,23 @@
     width: 382px;
     margin-top: 37px;
     margin-bottom: 22px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

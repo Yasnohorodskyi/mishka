@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: каталог товаров интернет-магазина Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -14,7 +16,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="../img/mishka-logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="../img/mishka-logo-tablet.svg">
-              <img class="page-header__logo-image" src="../img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина Мишка">
+              <img class="page-header__logo-image" src="../img/mishka-logo-mobile.svg" width="86px" height="35px" alt="Логотип интернет-магазина Мишка">
             </picture>
           </a>
         </div>
@@ -83,7 +85,7 @@
 
                   <source media="(min-width: 1150px)" srcset="../img/photo-1-desktop.jpg 1x, ../img/photo-1-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="../img/photo-1-tablet.jpg 1x, ../img/photo-1-tablet@2x.jpg 2x">
-                  <img class="product__image" width="260px" height="195px" src="../img/photo-1-mobile.jpg" srcset="../img/photo-1-mobile@2x.jpg 2x" alt="Вязанный Зайчик-попрыгайчик">
+                  <img class="product__image" width="260px" height="195px" src="../img/photo-1-mobile.jpg" srcset="../img/photo-1-mobile@2x.jpg 2x" loading="lazy" alt="Вязанный Зайчик-попрыгайчик">
                 </picture>
               </a>
               <figcaption class="product__caption">
@@ -115,7 +117,7 @@
 
                   <source media="(min-width: 1150px)" srcset="../img/photo-2-desktop.jpg 1x, ../img/photo-2-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="../img/photo-2-tablet.jpg 1x, ../img/photo-2-tablet@2x.jpg 2x">
-                  <img class="product__image" width="260px" height="195px" src="../img/photo-2-mobile.jpg" srcset="../img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                  <img class="product__image" width="260px" height="195px" src="../img/photo-2-mobile.jpg" srcset="../img/photo-2-mobile@2x.jpg 2x" loading="lazy" alt="Корзинка для белья">
                 </picture>
               </a>
               <figcaption class="product__caption">
@@ -147,7 +149,7 @@
 
                   <source media="(min-width: 1150px)" srcset="../img/photo-3-desktop.jpg 1x, ../img/photo-3-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="../img/photo-3-tablet.jpg 1x, ../img/photo-3-tablet@2x.jpg 2x">
-                  <img class="product__image" width="260px" height="195px" src="../img/photo-3-mobile.jpg" srcset="../img/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+                  <img class="product__image" width="260px" height="195px" src="../img/photo-3-mobile.jpg" srcset="../img/photo-3-mobile@2x.jpg 2x" loading="lazy" alt="Большая корзинка для игрушек">
                 </picture>
               </a>
               <figcaption class="product__caption">
@@ -185,7 +187,7 @@
 
                 <source media="(min-width: 1150px)" srcset="../img/video-desktop.jpg 1x, ../img/video-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="../img/video-tablet.jpg 1x, ../img/video-tablet@2x.jpg 2x">
-                <img class="production__video" src="../img/video-mobile.jpg" srcset="../img/video-mobile@2x.jpg 2x" alt="Процесс производства">
+                <img class="production__video" src="../img/video-mobile.jpg" srcset="../img/video-mobile@2x.jpg 2x" width="260px" height="150px" loading="lazy" alt="Процесс производства">
               </picture>
               <button class="production__video-button">
                 <span class="visually-hidden">Показать видео</span>
@@ -272,6 +274,6 @@
       </div>
     </section>
     <script src="../js/menu.js"></script>
-    <script src="../js/modal.js"></script>
+    <script src="../js/modal.js" type="module"></script>
   </body>
 </html>

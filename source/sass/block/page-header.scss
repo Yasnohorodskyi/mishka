@@ -26,11 +26,26 @@
   z-index: 2;
 
   @include tablet {
+    width: 113px;
+    height: 46px;
+    top: calc(50% - 46px / 2);
     left: 50px;
   }
 
   @include desktop {
-    left: calc(50% - 85px / 2);
+    width: 149px;
+    height: 72px;
+    top: calc(50% - 72px / 2);
+    left: calc(50% - 149px / 2);
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

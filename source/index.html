@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
   </head>
@@ -119,7 +121,7 @@
 
               <source media="(min-width: 1150px)" srcset="../img/triple-set-desktop.jpg 1x, ../img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="../img/triple-set-tablet.jpg 1x, ../img/triple-set-tablet@2x.jpg 2x">
-              <img class="popular-product__image" src="../img/triple-set-mobile.jpg" srcset="../img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки из экологически чистой пряжи">
+              <img class="popular-product__image" src="../img/triple-set-mobile.jpg" srcset="../img/triple-set-mobile@2x.jpg 2x" loading="lazy" alt="Вязанные корзинки из экологически чистой пряжи">
             </picture>
           </div>
           <p class="popular-product__price popular-product__price-wrapper">Цена: 990 руб.</p>
@@ -217,7 +219,7 @@
               <source type="image/webp" srcset="../img/map-mobile.webp 1x, ../img/map-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="../img/map-desktop.jpg 1x, ../img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="../img/map-tablet.jpg 1x, ../img/map-tablet@2x.jpg 2x">
-              <img class="map-link_image" src="../img/map-mobile.jpg" srcset="../img/map-mobile@2x.jpg 2x" alt="Карта с указанием адреса офиса">
+              <img class="map-link_image" src="../img/map-mobile.jpg" srcset="../img/map-mobile@2x.jpg 2x" loading="lazy" alt="Карта с указанием адреса офиса">
             </picture>
             <div id="mapid" class="map__interactive"></div>
           </div>
@@ -298,8 +300,8 @@
       </div>
     </section>
     <script src="../js/menu.js"></script>
-    <script src="../js/modal.js"></script>
-    <script src="../js/slider.js"></script>
+    <script src="../js/modal.js" type="module"></script>
+    <script src="../js/slider.js" type="module"></script>
     <script src="../js/map.js"></script>
   </body>
 </html>

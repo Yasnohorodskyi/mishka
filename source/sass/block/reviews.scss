@@ -45,14 +45,14 @@
 
   @include tablet {
     margin-bottom: 38px;
-    background-image: url("../img/review.jpg");
+    background-image: url("/img/review.jpg");
     background-position: top 0;
     background-repeat: no-repeat;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 133px 277px 132px;
 
     @include retina {
-      background-image: url("../img/review@2px.jpg");
+      background-image: url("/img/review@2px.jpg");
       background-size: 350px auto;
     }
   }

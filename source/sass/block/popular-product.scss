@@ -69,6 +69,7 @@
 .popular-product__picture {
   background-color: $dark-grey-background;
   margin-bottom: 26px;
+  height: 100%;
 
   @include tablet {
     grid-column: 2 / -1;

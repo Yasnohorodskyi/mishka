@@ -31,7 +31,7 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("docs/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -42,7 +42,7 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("./source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("docs"));
+    .pipe(gulp.dest("build"));
 }
 
 // Scripts
@@ -50,7 +50,7 @@ const html = () => {
 const scripts = () => {
   return gulp.src("source/js/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("docs/js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
@@ -65,7 +65,7 @@ const images = () => {
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("docs/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = images;
@@ -75,7 +75,7 @@ exports.images = images;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("docs/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.createWebp = createWebp;
@@ -86,7 +86,7 @@ const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite_icon.svg"))
-    .pipe(gulp.dest("docs/img"));
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -101,7 +101,7 @@ const copy = (done) => {
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("docs"))
+    .pipe(gulp.dest("build"))
   done();
 }
 
@@ -110,7 +110,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del("docs");
+  return del("build");
 };
 
 // Server
@@ -118,7 +118,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "docs"
+      baseDir: "build"
     },
     cors: true,
     notify: false,

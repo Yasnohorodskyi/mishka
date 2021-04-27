@@ -81,7 +81,7 @@
 }
 
 .order-form__option {
-  appearance: none;
+  @include visually-hidden;
 }
 
 .order-form__field-label {

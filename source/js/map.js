@@ -16,7 +16,7 @@
     myMap.addLayer(layer);
 
     const iconOptions = {
-      iconUrl: '../img/map-pin.svg',
+      iconUrl: './img/map-pin.svg',
       iconSize: [67, 100],
       iconAnchor:   [25, 85]
     }

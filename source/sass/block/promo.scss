@@ -19,7 +19,7 @@
 }
 
 .promo__container {
-  background-image: url("img/hero-mobile.webp");
+  background-image: url("../img/hero-mobile.webp");
   background-position: center -17px;
   background-repeat: no-repeat;
   display: grid;
@@ -27,25 +27,25 @@
   align-items: end;
 
   @include retina {
-    background-image: url("img/hero-mobile@2x.webp");
+    background-image: url("../img/hero-mobile@2x.webp");
     background-size: 320px auto;
   }
 
   @include tablet {
-    background-image: url("img/hero-tablet.webp");
+    background-image: url("../img/hero-tablet.webp");
     background-position: center;
 
     @include retina {
-      background-image: url("img/hero-tablet@2x.webp");
+      background-image: url("../img/hero-tablet@2x.webp");
       background-size: 768px auto;
     }
   }
 
   @include desktop {
-    background-image: url("img/hero-desktop.webp");
+    background-image: url("../img/hero-desktop.webp");
 
     @include retina {
-      background-image: url("img/hero-desktop@2x.webp");
+      background-image: url("../img/hero-desktop@2x.webp");
       background-size: 1150px auto;
     }
   }

@@ -79,7 +79,7 @@
   width: 32px;
   height: 22px;
   left: 34px;
-  background-image: url("img/video.svg");
+  background-image: url("../img/video.svg");
 
   @include tablet {
     left: 42px;
@@ -120,7 +120,7 @@
   height: 77px;
   right: calc(50% - 101px / 2);
   top: calc(50% - 77px / 2);
-  background-image: url("img/play.svg");
+  background-image: url("../img/play.svg");
   background-repeat: no-repeat;
   background-position: center;
   outline: none;
@@ -139,7 +139,7 @@
     height: 62px;
     right: calc(50% - 81px / 2);
     top: calc(50% - 62px / 2);
-    background-image: url("img/play-active.svg");
+    background-image: url("../img/play-active.svg");
     background-size: 81px 62px;
   }
 }

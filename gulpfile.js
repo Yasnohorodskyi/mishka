@@ -98,6 +98,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.{jpg,png,svg}",
+    "source/img/sprite-set.svg"
   ], {
     base: "source"
   })
@@ -153,8 +154,8 @@ const build = gulp.series(
     html,
     scripts,
     sprite,
-    copy,
     images,
+    copy,
     createWebp
   ));
 
